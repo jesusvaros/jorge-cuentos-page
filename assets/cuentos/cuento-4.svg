@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" role="img" aria-label="Cuento IV">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#5e4f34" />
+      <stop offset="100%" stop-color="#8a7a58" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1100" fill="url(#bg)" />
+  <rect x="48" y="48" width="704" height="1004" rx="30" fill="none" stroke="#f9f3ec" stroke-width="8" />
+  <text x="80" y="160" font-size="28" font-family="Arial, sans-serif" fill="#fff" opacity="0.9">JORGE VALVERDE SANTO</text>
+  <text x="80" y="480" font-size="72" font-family="Georgia, serif" fill="#fff">Cuento IV</text>
+  <text x="80" y="560" font-size="34" font-family="Arial, sans-serif" fill="#fff" opacity="0.95">Ultima parada</text>
+</svg>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jorge Valverde Santo - Pagina de autor</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body data-page="home">
+    <header class="site-header">
+      <div class="brand">
+        <p class="eyebrow">Escritor</p>
+        <h1>Jorge Valverde Santo</h1>
+      </div>
+      <nav>
+        <a href="index.html" class="active">Inicio</a>
+        <a href="sobre-mi.html">Sobre mi</a>
+        <a href="cuentos.html">Cuentos</a>
+        <a href="fancines.html">Fanfics</a>
+        <a href="proyectos-activos.html">Proyectos activos</a>
+        <a href="carteles.html">Carteles</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="tag">Biblioteca abierta</p>
+        <h2>Historias, proyectos y carteles del mismo universo creativo</h2>
+        <p>
+          Todas las secciones se alimentan del mismo JSON local para mantener una edicion simple y coherente.
+        </p>
+      </section>
+
+      <section class="collection-section">
+        <div class="section-head">
+          <h3>Cuentos</h3>
+          <a id="cuentos-link" href="cuentos.html">Ver todos los cuentos</a>
+        </div>
+        <div id="cuentos-preview" class="card-grid"></div>
+      </section>
+
+      <section class="collection-section">
+        <div class="section-head">
+          <h3>Fanfics</h3>
+          <a id="fancines-link" href="fancines.html">Ver todos los fanfics</a>
+        </div>
+        <div id="fancines-preview" class="card-grid"></div>
+      </section>
+
+      <section class="collection-section">
+        <div class="section-head">
+          <h3>Proyectos activos</h3>
+          <a id="proyectos-link" href="proyectos-activos.html">Ver todos los proyectos activos</a>
+        </div>
+        <div id="proyectos-preview" class="card-grid"></div>
+      </section>
+
+      <section class="collection-section">
+        <div class="section-head">
+          <h3>Carteles</h3>
+          <a id="carteles-link" href="carteles.html">Ver todos los carteles</a>
+        </div>
+        <div id="carteles-preview" class="card-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Pagina personal de Jorge Valverde Santo.</p>
+    </footer>
+
+    <script type="module" src="scripts/home.js"></script>
+  </body>
+</html>
