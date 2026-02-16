@@ -1,4 +1,4 @@
-import { loadLibrary, renderError } from "./common.js";
+import { loadLibrary, renderError, renderFooter } from "./common.js";
 
 const root = document.getElementById("about-root");
 
@@ -54,7 +54,7 @@ async function renderAbout() {
       </article>
 
       <section class="about-extra">
-        <h3>Resumen profesional</h3>
+        <h3>Como trabajo cada proyecto</h3>
         ${createHighlights(author.highlights)}
       </section>
     `;
@@ -65,3 +65,4 @@ async function renderAbout() {
 }
 
 renderAbout();
+renderFooter();

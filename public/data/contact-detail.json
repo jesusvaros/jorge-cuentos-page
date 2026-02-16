@@ -1,0 +1,57 @@
+{
+  "email": {
+    "label": "contacto@jorgevalverdesanto.com",
+    "href": "mailto:contacto@jorgevalverdesanto.com"
+  },
+  "social": [
+    {
+      "label": "Instagram",
+      "href": "https://instagram.com/jorgevalverdesanto",
+      "icon": "assets/icons/instagram.svg"
+    },
+    {
+      "label": "X",
+      "href": "https://x.com/jorgevsanto",
+      "icon": "assets/icons/x.svg"
+    },
+    {
+      "label": "YouTube",
+      "href": "https://youtube.com/@jorgevalverdesanto",
+      "icon": "assets/icons/youtube.svg"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/jorgevalverdesanto",
+      "icon": "assets/icons/github.svg"
+    }
+  ],
+  "pages": [
+    {
+      "label": "Inicio",
+      "href": "index.html"
+    },
+    {
+      "label": "Sobre mi",
+      "href": "sobre-mi.html"
+    },
+    {
+      "label": "Cuentos",
+      "href": "cuentos.html"
+    },
+    {
+      "label": "Fanfics",
+      "href": "fancines.html"
+    },
+    {
+      "label": "Proyectos activos",
+      "href": "proyectos-activos.html"
+    },
+    {
+      "label": "Carteles",
+      "href": "carteles.html"
+    }
+  ],
+  "legal": {
+    "copyright": "© 2026 Jorge Valverde Santo. Todos los derechos reservados."
+  }
+}

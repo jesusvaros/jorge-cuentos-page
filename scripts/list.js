@@ -1,4 +1,4 @@
-import { createItemCard, getCollectionLabel, loadLibrary, renderError } from "./common.js";
+import { createItemCard, getCollectionLabel, loadLibrary, renderError, renderFooter } from "./common.js";
 
 const root = document.getElementById("list-root");
 const collection = document.body.dataset.collection;
@@ -27,3 +27,4 @@ async function renderList() {
 }
 
 renderList();
+renderFooter();

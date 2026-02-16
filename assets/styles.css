@@ -300,6 +300,60 @@ nav a.active {
   color: #705741;
 }
 
+.footer-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  background: linear-gradient(130deg, #fff8ed, #f3dfc2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(34, 26, 19, 0.08);
+  padding: 1rem;
+}
+
+.footer-title {
+  margin: 0;
+  font-family: "Cardo", serif;
+  font-size: 1.15rem;
+  color: #5b3a24;
+}
+
+.footer-links,
+.footer-social {
+  margin: 0.7rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.footer-links a,
+.footer-email {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.social-link img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.footer-legal {
+  margin: 0.65rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
 @keyframes rise {
   from {
     opacity: 0;
@@ -323,6 +377,10 @@ nav a.active {
   }
 
   .about-card {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
     grid-template-columns: 1fr;
   }
 }

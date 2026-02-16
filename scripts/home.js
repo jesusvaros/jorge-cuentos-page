@@ -1,4 +1,4 @@
-import { createItemCard, getCollectionLabel, getCollectionPage, loadLibrary, renderError } from "./common.js";
+import { createItemCard, getCollectionLabel, getCollectionPage, loadLibrary, renderError, renderFooter } from "./common.js";
 
 const previews = [
   { key: "cuentos", root: document.getElementById("cuentos-preview"), link: document.getElementById("cuentos-link") },
@@ -34,3 +34,4 @@ async function renderHome() {
 }
 
 renderHome();
+renderFooter();

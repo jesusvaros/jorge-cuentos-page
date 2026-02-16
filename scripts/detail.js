@@ -5,6 +5,7 @@ import {
   getItemMeta,
   loadLibrary,
   renderError,
+  renderFooter,
 } from "./common.js";
 
 const detailRoot = document.getElementById("detail-root");
@@ -58,3 +59,4 @@ async function renderDetail() {
 }
 
 renderDetail();
+renderFooter();

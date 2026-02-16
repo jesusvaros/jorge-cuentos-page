@@ -1,4 +1,6 @@
 const DATA_URL = "data/library.json";
+const CONTACT_URL = "data/contact-detail.json";
+let contactDetailsCache = null;
 
 const COLLECTION_CONFIG = {
   cuentos: {
@@ -31,6 +33,75 @@ export async function loadLibrary() {
   }
 
   return response.json();
+}
+
+export async function loadContactDetails() {
+  if (contactDetailsCache) {
+    return contactDetailsCache;
+  }
+
+  const response = await fetch(CONTACT_URL);
+
+  if (!response.ok) {
+    throw new Error(`No se pudo leer ${CONTACT_URL}`);
+  }
+
+  contactDetailsCache = await response.json();
+  return contactDetailsCache;
+}
+
+export async function renderFooter() {
+  const footer = document.querySelector("[data-site-footer]");
+
+  if (!footer) {
+    return;
+  }
+
+  try {
+    const details = await loadContactDetails();
+    const pageLinks = details.pages || [];
+    const socialLinks = details.social || [];
+    const email = details.email || {};
+    const legal = details.legal || {};
+
+    const pagesHtml = pageLinks
+      .map((page) => `<li><a href="${page.href}">${page.label}</a></li>`)
+      .join("");
+
+    const socialHtml = socialLinks
+      .map(
+        (social) => `
+          <li>
+            <a class="social-link" href="${social.href}" target="_blank" rel="noreferrer" aria-label="${social.label}">
+              <img src="${social.icon}" alt="" />
+              <span>${social.label}</span>
+            </a>
+          </li>
+        `,
+      )
+      .join("");
+
+    footer.innerHTML = `
+      <div class="footer-grid">
+        <section>
+          <p class="footer-title">Navegacion</p>
+          <ul class="footer-links">${pagesHtml}</ul>
+        </section>
+        <section>
+          <p class="footer-title">Redes</p>
+          <ul class="footer-social">${socialHtml}</ul>
+        </section>
+        <section>
+          <p class="footer-title">Contacto</p>
+          <a class="footer-email" href="${email.href || "#"}">${email.label || "Email no disponible"}</a>
+          <p class="footer-legal">${legal.copyright || ""}</p>
+        </section>
+      </div>
+    `;
+  } catch (error) {
+    footer.innerHTML = "<p>No se pudo cargar el footer de contacto.</p>";
+    console.error(error);
+  }
 }
 
 export function getCollectionLabel(collection) {
