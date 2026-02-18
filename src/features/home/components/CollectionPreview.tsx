@@ -18,7 +18,7 @@ export function CollectionPreview({ title, route, stories }: CollectionPreviewPr
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(170px,1fr))] gap-3">
         {stories.map((story) => (
           <StoryCard key={story.slug} story={story} />
         ))}

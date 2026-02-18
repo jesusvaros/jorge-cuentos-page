@@ -23,6 +23,8 @@ export class JsonStoryRepository implements StoryRepository {
     this.stories = {
       cuentos: rawLibrary.cuentos.map((item) => mapStory("cuentos", item)),
       fanzines: rawLibrary.fanzines.map((item) => mapStory("fanzines", item)),
+      carteles: rawLibrary.carteles.map((item) => mapStory("carteles", item)),
+      proyectos: rawLibrary.proyectos.map((item) => mapStory("proyectos", item)),
     };
 
     // Assert mapper consistency early so data errors fail fast.

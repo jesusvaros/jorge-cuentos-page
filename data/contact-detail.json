@@ -23,27 +23,27 @@
   "pages": [
     {
       "label": "Inicio",
-      "href": "index.html"
+      "href": "/"
     },
     {
       "label": "Sobre mí",
-      "href": "sobre-mi.html"
+      "href": "/sobre-mi"
     },
     {
       "label": "Cuentos",
-      "href": "cuentos.html"
+      "href": "/cuentos"
     },
     {
       "label": "Fanzines",
-      "href": "fanzines.html"
+      "href": "/fanzines"
     },
     {
       "label": "Carteles",
-      "href": "carteles.html"
+      "href": "/carteles"
     },
     {
       "label": "Proyectos activos",
-      "href": "proyectos-activos.html"
+      "href": "/proyectos-activos"
     }
   ],
   "legal": {
