@@ -8,7 +8,7 @@ export default defineConfig({
       input: {
         index: "index.html",
         cuentos: "cuentos.html",
-        fancines: "fancines.html",
+        fanzines: "fanzines.html",
         detail: "detail.html",
         sobreMi: "sobre-mi.html",
         proyectosActivos: "proyectos-activos.html",

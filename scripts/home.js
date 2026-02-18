@@ -2,9 +2,9 @@ import { createItemCard, getCollectionLabel, getCollectionPage, loadLibrary, ren
 
 const previews = [
   { key: "cuentos", root: document.getElementById("cuentos-preview"), link: document.getElementById("cuentos-link") },
-  { key: "fancines", root: document.getElementById("fancines-preview"), link: document.getElementById("fancines-link") },
-  { key: "proyectos", root: document.getElementById("proyectos-preview"), link: document.getElementById("proyectos-link") },
+  { key: "fanzines", root: document.getElementById("fanzines-preview"), link: document.getElementById("fanzines-link") },
   { key: "carteles", root: document.getElementById("carteles-preview"), link: document.getElementById("carteles-link") },
+  { key: "proyectos", root: document.getElementById("proyectos-preview"), link: document.getElementById("proyectos-link") },
 ];
 
 async function renderHome() {

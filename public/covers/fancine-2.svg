@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="1120" viewBox="0 0 800 1120">
   <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#274f8a"/><stop offset="1" stop-color="#5ec8f2"/></linearGradient></defs>
   <rect width="800" height="1120" fill="url(#g)"/>
-  <text x="70" y="170" fill="#eef7ff" font-size="76" font-family="serif">Fanfics II</text>
+  <text x="70" y="170" fill="#eef7ff" font-size="76" font-family="serif">Fanzines II</text>
 </svg>

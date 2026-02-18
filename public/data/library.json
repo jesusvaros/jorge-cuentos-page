@@ -1,14 +1,14 @@
 {
   "author": {
-    "name": "Jorge Valverde Santo",
+    "name": "Jorge Valverde Santos",
     "role": "Escritor y editor narrativo",
     "location": "Lima, Peru",
-    "bio": "Trabajo en cuentos breves, fanfics de ciencia ficcion y proyectos transmedia. Me interesa cruzar literatura, ilustracion y talleres para comunidades lectoras.",
-    "portrait": "assets/autor/jorge-valverde-santo.svg",
+    "bio": "Trabajo en cuentos breves, fanzines de ciencia ficcion y proyectos transmedia. Me interesa cruzar literatura, ilustracion y talleres para comunidades lectoras.",
+    "portrait": "assets/autor/jorge-valverde-santos.svg",
     "links": [
       {
         "label": "Portafolio",
-        "url": "https://example.com/jorge-valverde-santo"
+        "url": "https://example.com/jorge-valverde-santos"
       },
       {
         "label": "Newsletter",
@@ -16,7 +16,7 @@
       },
       {
         "label": "Contacto",
-        "url": "mailto:contacto@jorgevalverdesanto.com"
+        "url": "mailto:contacto@jorgevalverdesantos.com"
       }
     ],
     "highlights": [
@@ -25,40 +25,40 @@
       "Desarrollo proyectos editoriales con enfoque en lectura joven y cultura pop."
     ]
   },
-  "fancines": [
+  "fanzines": [
     {
       "name": "La Orden de Ceniza",
       "duration of read": "22 min",
       "text": "<h3>Capitulo I</h3><p>La luna vibraba sobre los tejados cuando Mara encontro el manuscrito oculto en la torre norte. Cada palabra parecia escrita para ella.</p><p>En la ultima pagina, una nota decia: <strong>si encuentras esto, ya eres parte de la historia</strong>.</p><h3>Capitulo II</h3><p>Al tocar el sello del reino, las campanas callaron y la ciudad quedo en silencio. Mara entendio que el tiempo podia doblarse.</p>",
-      "image cover": "assets/fancines/fancine-1.svg",
+      "image cover": "assets/fanzines/fancine-1.svg",
       "price": "$4.99"
     },
     {
       "name": "Bitacora del Capitan Ohn",
       "duration of read": "18 min",
       "text": "<h3>Entrada 047</h3><p>La tripulacion escucho voces dentro del casco. No venian del exterior, sino del futuro.</p><p>El capitan escribio tres reglas para sobrevivir: no mirar atras, no repetir nombres, no confiar en espejos.</p>",
-      "image cover": "assets/fancines/fancine-2.svg",
+      "image cover": "assets/fanzines/fancine-2.svg",
       "price": "$3.50"
     },
     {
       "name": "Manual para Revivir Dragones",
       "duration of read": "15 min",
       "text": "<p>Primero: junta los huesos en silencio. Segundo: deja una vela encendida durante nueve amaneceres. Tercero: ofrece una memoria feliz.</p><p>Si el dragon abre los ojos, no le preguntes su nombre. Preguntale por el tuyo.</p>",
-      "image cover": "assets/fancines/fancine-3.svg",
+      "image cover": "assets/fanzines/fancine-3.svg",
       "price": "$5.20"
     },
     {
       "name": "Neon en Midgar",
       "duration of read": "20 min",
       "text": "<p>El tren llego tarde, como siempre. Tifa esperaba en el anden con un sobre sin remitente y una advertencia: <em>esta noche alguien apagara la ciudad</em>.</p><p>Cloud solo tenia una pregunta: quien ganaba cuando todos perdian.</p>",
-      "image cover": "assets/fancines/fancine-4.svg",
+      "image cover": "assets/fanzines/fancine-4.svg",
       "price": "$4.30"
     },
     {
       "name": "Cabina 09",
       "duration of read": "17 min",
       "text": "<p>Una estacion orbital mantiene una cabina cerrada desde hace veinte anos. Nadie sabe quien vive dentro, pero cada amanecer llega una nueva pagina mecanografiada.</p><p>Cuando Lia entra por error, descubre que los textos narran escenas que aun no ocurrieron.</p>",
-      "image cover": "assets/fancines/fancine-5.svg",
+      "image cover": "assets/fanzines/fancine-5.svg",
       "price": "$3.90"
     }
   ],
@@ -124,7 +124,7 @@
     {
       "name": "Archivo visual de personajes",
       "duration of read": "Sprint 2 de 5",
-      "text": "<p>Biblioteca de fichas visuales para protagonistas y secundarios de cuentos y fanfics. Se trabaja junto a ilustradores invitados para unificar paleta y tono.</p><h3>Entregables</h3><p>12 fichas completas y guia de estilo descargable.</p>",
+      "text": "<p>Biblioteca de fichas visuales para protagonistas y secundarios de cuentos y fanzines. Se trabaja junto a ilustradores invitados para unificar paleta y tono.</p><h3>Entregables</h3><p>12 fichas completas y guia de estilo descargable.</p>",
       "image cover": "assets/proyectos/proyecto-4.svg",
       "price": "Estado: En desarrollo"
     }
@@ -135,28 +135,28 @@
       "duration of read": "Formato A2",
       "text": "<p>Poster principal para evento anual de microficcion. Incluye version para impresion y variante digital para redes.</p><h3>Paleta</h3><p>Rojo ladrillo, crema y negro grafito.</p>",
       "image cover": "assets/carteles/cartel-1.svg",
-      "price": "Disponible para impresion"
+      "price": "4 euros"
     },
     {
       "name": "Cartel Club de lectura nocturna",
       "duration of read": "Formato A3",
       "text": "<p>Pieza para sesiones mensuales de lectura compartida. El diseño prioriza contraste alto para carteleria en cafeterias y bibliotecas.</p><h3>Versiones</h3><p>Incluye editable y PDF final.</p>",
       "image cover": "assets/carteles/cartel-2.svg",
-      "price": "Comision cerrada"
+      "price": "4 euros"
     },
     {
       "name": "Cartel Lanzamiento de antologia",
       "duration of read": "Formato cuadrado",
       "text": "<p>Diseño promocional para lanzamiento de antologia con firma de autores. La composicion combina tipografia serif y textura de papel envejecido.</p><h3>Uso</h3><p>Redes sociales, web y afiche impreso.</p>",
       "image cover": "assets/carteles/cartel-3.svg",
-      "price": "Disponible digital"
+      "price": "4 euros"
     },
     {
       "name": "Cartel Taller de escritura rapida",
       "duration of read": "Formato 1080x1350",
       "text": "<p>Pieza modular para difundir talleres intensivos de fin de semana. Se adapta por fecha y sede manteniendo la identidad visual general.</p><h3>Incluye</h3><p>Plantilla base y dos variaciones de color.</p>",
       "image cover": "assets/carteles/cartel-4.svg",
-      "price": "Editable activo"
+      "price": "4 euros"
     }
   ]
 }

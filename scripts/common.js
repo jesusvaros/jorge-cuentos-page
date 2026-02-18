@@ -1,5 +1,6 @@
 const DATA_URL = "data/library.json";
 const CONTACT_URL = "data/contact-detail.json";
+const PLACEHOLDER_IMAGE = "assets/ui/placeholder.svg";
 let contactDetailsCache = null;
 
 const COLLECTION_CONFIG = {
@@ -8,9 +9,9 @@ const COLLECTION_CONFIG = {
     page: "cuentos.html",
     cta: "Leer completo",
   },
-  fancines: {
-    label: "Fanfics",
-    page: "fancines.html",
+  fanzines: {
+    label: "Fanzines",
+    page: "fanzines.html",
     cta: "Leer completo",
   },
   proyectos: {
@@ -82,24 +83,26 @@ export async function renderFooter() {
       .join("");
 
     footer.innerHTML = `
-      <div class="footer-grid">
-        <section>
-          <p class="footer-title">Navegacion</p>
-          <ul class="footer-links">${pagesHtml}</ul>
-        </section>
-        <section>
-          <p class="footer-title">Redes</p>
-          <ul class="footer-social">${socialHtml}</ul>
-        </section>
-        <section>
-          <p class="footer-title">Contacto</p>
-          <a class="footer-email" href="${email.href || "#"}">${email.label || "Email no disponible"}</a>
-          <p class="footer-legal">${legal.copyright || ""}</p>
-        </section>
+      <div class="site-footer-inner">
+        <div class="footer-grid">
+          <section>
+            <p class="footer-title">Navegacion</p>
+            <ul class="footer-links">${pagesHtml}</ul>
+          </section>
+          <section>
+            <p class="footer-title">Redes</p>
+            <ul class="footer-social">${socialHtml}</ul>
+          </section>
+          <section>
+            <p class="footer-title">Contacto</p>
+            <a class="footer-email" href="${email.href || "#"}">${email.label || "Email no disponible"}</a>
+            <p class="footer-legal">${legal.copyright || ""}</p>
+          </section>
+        </div>
       </div>
     `;
   } catch (error) {
-    footer.innerHTML = "<p>No se pudo cargar el footer de contacto.</p>";
+    footer.innerHTML = '<div class="site-footer-inner"><p>No se pudo cargar el footer de contacto.</p></div>';
     console.error(error);
   }
 }
@@ -121,47 +124,86 @@ export function getReadDuration(item) {
 }
 
 export function getSecondaryMeta(item) {
-  return item.price || item.status || item.audience || "Sin precio";
+  return item.price || item.status || item.audience || "";
 }
 
-export function getItemMeta(item) {
-  return `${getReadDuration(item)} - ${getSecondaryMeta(item)}`;
+export function getItemMeta(collection, item) {
+  const duration = getReadDuration(item);
+
+  if (collection === "cuentos") {
+    return duration;
+  }
+
+  const secondary = getSecondaryMeta(item);
+  return secondary ? `${duration} - ${secondary}` : duration;
 }
 
 export function getCoverImage(item) {
-  return item["image cover"] || "assets/ui/placeholder.svg";
+  const imageCandidates = [
+    item["image cover"],
+    item.image,
+    item["image png"],
+    item["image jpg"],
+    item["image jpeg"],
+    item["image webp"],
+    item["image cover png"],
+    item["image cover jpg"],
+    item["image cover jpeg"],
+    item["image cover webp"],
+    ...(Array.isArray(item.images) ? item.images : []),
+  ].filter((value) => typeof value === "string" && value.trim().length > 0);
+
+  const preferredImage = imageCandidates.find((value) => /\.(svg|png|jpe?g|webp|gif|avif)(\?.*)?$/i.test(value));
+
+  return preferredImage || imageCandidates[0] || PLACEHOLDER_IMAGE;
 }
 
 export function createItemCard(item, collection, index) {
   const article = document.createElement("article");
-  article.className = "story-card";
+  article.className = `story-card collection-${collection}`;
+  article.dataset.collection = collection;
 
   const link = document.createElement("a");
   link.href = `detail.html?type=${collection}&id=${index}`;
   link.className = "card-link";
   link.setAttribute("aria-label", `Abrir ${item.name}`);
 
+  const media = document.createElement("div");
+  media.className = "card-media";
+
   const cover = document.createElement("img");
   cover.src = getCoverImage(item);
   cover.alt = `Portada de ${item.name}`;
   cover.loading = "lazy";
+  cover.addEventListener("error", () => {
+    if (cover.src.endsWith(PLACEHOLDER_IMAGE)) {
+      return;
+    }
+    cover.src = PLACEHOLDER_IMAGE;
+  });
+
+  const titleOverlay = document.createElement("h4");
+  titleOverlay.className = "card-title-overlay";
+  titleOverlay.textContent = item.name;
 
   const body = document.createElement("div");
   body.className = "card-body";
 
-  const name = document.createElement("h4");
-  name.textContent = item.name;
+  const nameInline = document.createElement("h4");
+  nameInline.className = "card-title-inline";
+  nameInline.textContent = item.name;
 
   const meta = document.createElement("p");
   meta.className = "meta";
-  meta.textContent = getItemMeta(item);
+  meta.textContent = getItemMeta(collection, item);
 
   const cta = document.createElement("span");
   cta.className = "cta";
   cta.textContent = getCollectionCta(collection);
 
-  body.append(name, meta, cta);
-  link.append(cover, body);
+  media.append(cover, titleOverlay);
+  body.append(nameInline, meta, cta);
+  link.append(media, body);
   article.append(link);
 
   return article;

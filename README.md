@@ -3,17 +3,17 @@
 SPA para la pagina personal de un escritor con dos colecciones:
 
 - `cuentos`
-- `fancines` (etiquetado en UI como fanfics)
+- `fanzines` (etiquetado en UI como fanzines)
 
 No usa backend. Todo el contenido sale de un JSON local.
 
 ## Rutas
 
-- `/` portada con secciones de cuentos y fanfics
+- `/` portada con secciones de cuentos y fanzines
 - `/cuentos` listado completo de cuentos
-- `/fancines` listado completo de fanfics
+- `/fanzines` listado completo de fanzines
 - `/cuentos/:slug` lectura completa
-- `/fancines/:slug` lectura completa
+- `/fanzines/:slug` lectura completa
 
 ## Fuente de datos
 
@@ -23,7 +23,7 @@ Formato requerido:
 
 ```json
 {
-  "fancines": [
+  "fanzines": [
     {
       "name": "string",
       "duration of read": "string",

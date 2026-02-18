@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const links = [
   { to: "/", label: "Inicio", exact: true },
   { to: "/cuentos", label: "Cuentos" },
-  { to: "/fancines", label: "Fanfics" },
+  { to: "/fanzines", label: "Fanzines" },
 ];
 
 export function Header() {

@@ -22,7 +22,7 @@ export class JsonStoryRepository implements StoryRepository {
   constructor(rawLibrary: RawLibrary) {
     this.stories = {
       cuentos: rawLibrary.cuentos.map((item) => mapStory("cuentos", item)),
-      fancines: rawLibrary.fancines.map((item) => mapStory("fancines", item)),
+      fanzines: rawLibrary.fanzines.map((item) => mapStory("fanzines", item)),
     };
 
     // Assert mapper consistency early so data errors fail fast.

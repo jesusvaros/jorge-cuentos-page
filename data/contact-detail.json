@@ -1,28 +1,23 @@
 {
   "email": {
-    "label": "contacto@jorgevalverdesanto.com",
-    "href": "mailto:contacto@jorgevalverdesanto.com"
+    "label": "contacto@jorgevalverdesantos.com",
+    "href": "mailto:contacto@jorgevalverdesantos.com"
   },
   "social": [
     {
-      "label": "Instagram",
-      "href": "https://instagram.com/jorgevalverdesanto",
+      "label": "@valkkimista",
+      "href": "https://instagram.com/valkkimista",
       "icon": "assets/icons/instagram.svg"
     },
     {
-      "label": "X",
-      "href": "https://x.com/jorgevsanto",
-      "icon": "assets/icons/x.svg"
+      "label": "@jorgegrapa",
+      "href": "https://instagram.com/jorgegrapa",
+      "icon": "assets/icons/instagram.svg"
     },
     {
-      "label": "YouTube",
-      "href": "https://youtube.com/@jorgevalverdesanto",
-      "icon": "assets/icons/youtube.svg"
-    },
-    {
-      "label": "GitHub",
-      "href": "https://github.com/jorgevalverdesanto",
-      "icon": "assets/icons/github.svg"
+      "label": "@jorgevalverde",
+      "href": "https://substack.com/@jorgevalverde",
+      "icon": "assets/icons/substack.svg"
     }
   ],
   "pages": [
@@ -31,7 +26,7 @@
       "href": "index.html"
     },
     {
-      "label": "Sobre mi",
+      "label": "Sobre mí",
       "href": "sobre-mi.html"
     },
     {
@@ -39,19 +34,19 @@
       "href": "cuentos.html"
     },
     {
-      "label": "Fanfics",
-      "href": "fancines.html"
-    },
-    {
-      "label": "Proyectos activos",
-      "href": "proyectos-activos.html"
+      "label": "Fanzines",
+      "href": "fanzines.html"
     },
     {
       "label": "Carteles",
       "href": "carteles.html"
+    },
+    {
+      "label": "Proyectos activos",
+      "href": "proyectos-activos.html"
     }
   ],
   "legal": {
-    "copyright": "© 2026 Jorge Valverde Santo. Todos los derechos reservados."
+    "copyright": "© 2026 Jorge Valverde Santos. Todos los derechos reservados."
   }
 }

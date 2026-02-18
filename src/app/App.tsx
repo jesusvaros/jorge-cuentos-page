@@ -10,8 +10,8 @@ export function App() {
       <SiteLayout>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/:collection(cuentos|fancines)/:slug" component={StoryDetailPage} />
-          <Route exact path="/:collection(cuentos|fancines)" component={CollectionPage} />
+          <Route exact path="/:collection(cuentos|fanzines)/:slug" component={StoryDetailPage} />
+          <Route exact path="/:collection(cuentos|fanzines)" component={CollectionPage} />
           <Route>
             <Redirect to="/" />
           </Route>

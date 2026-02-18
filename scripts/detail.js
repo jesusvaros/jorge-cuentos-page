@@ -48,8 +48,8 @@ async function renderDetail() {
     detailRoot.innerHTML = `
       <a class="back-link" href="${backHref}">Volver a ${getCollectionLabel(type)}</a>
       <h2>${item.name}</h2>
-      <p class="meta">${getItemMeta(item)}</p>
-      <img class="detail-cover" src="${getCoverImage(item)}" alt="Portada de ${item.name}" />
+      <p class="meta">${getItemMeta(type, item)}</p>
+      <img class="detail-cover" src="${getCoverImage(item)}" alt="Portada de ${item.name}" onerror="this.onerror=null;this.src='assets/ui/placeholder.svg';" />
       <section class="rich-text">${item.text}</section>
     `;
   } catch (error) {
